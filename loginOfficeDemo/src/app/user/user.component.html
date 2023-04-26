@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div class=""><h3>User List</h3></div>
+    <table class="table">
+       <thead>
+          <tr class="table-header">
+             <th class="header__item">#ID</th>
+             <th class="header__item">Name</th>
+             <th class="header__item">Email</th>
+             <!-- <th>Phone</th>
+             <th>Address</th> -->
+             <th class="header__item">Action</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let item of ItemsArray" class="table-row">
+             <td class="table-data">{{ item.id }}</td>
+             <td class="table-data">{{ item.name }}</td>
+             <td class="table-data">{{ item.email }}</td>
+             <td class="table-data">
+                <a [routerLink]="['edit', item.id]">Edit</a> &nbsp;
+                <a  [routerLink]="['delete', item.id]">Delete</a>
+             </td>
+          </tr>
+       </tbody>
+    </table>
+ </div>
